@@ -13,8 +13,8 @@ const Signup = () => {
         confirmPassword: ''
     });
 
-    // Alfred's Note: This is a 'smart' handler.
-    // It uses the 'name' of the input to update the matching key in formData.
+
+
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value });
     };
@@ -35,13 +35,13 @@ const Signup = () => {
                 <InputField
                     label="Full Name"
                     type="text"
-                    name="fullName"           // Must match state key exactly!
-                    value={formData.fullName} // The wire from State -> Input
-                    onChange={handleChange}   // The wire from Input -> State
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
                     placeholder="Abebe Kebede"
                 />
                 <InputField
-                    label="Email" // Fixed typo "Email Email"
+                    label="Email"
                     type="email"
                     name="email"
                     value={formData.email}
@@ -50,7 +50,7 @@ const Signup = () => {
                 />
                 <InputField
                     label="Password"
-                    type="password" // Changed to password so dots appear
+                    type="password"
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
@@ -65,11 +65,8 @@ const Signup = () => {
                     placeholder="••••••••"
                 />
 
-                {/* Moved button inside form so 'Enter' key submits it */}
                 <button className="signup-btn">Sign Up</button>
             </form>
-
-            {/* Added text inside the Link so it is visible */}
             <p>Have an account? <Link to="/" className="link">Login</Link></p>
         </motion.div>
     );
