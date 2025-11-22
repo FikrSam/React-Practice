@@ -4,7 +4,7 @@ import { motion as Motion } from "framer-motion";
 import InputField from "../components/InputField";
 // import '../assets';
 import "../App.css";
-import AccountBoxIcon from "../assets/Account Box Icon.svg";
+import PersonIcon from "../assets/Person Icon.svg";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -23,7 +23,7 @@ const Login = () => {
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.5 }}
     >
-      <img className="account-box" src={AccountBoxIcon} alt="Icon" />
+      <img className="account-box" src={PersonIcon} alt="Icon" />
       <h2>Welcome to Francc</h2>
       <p>Save Your Dabloons!!</p>
 
