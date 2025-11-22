@@ -24,7 +24,7 @@ const Signup = () => {
             className="container"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
+            exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.5 }}
         >
             <img className="account-box" src={PersonIcon} alt="Icon"/>
@@ -47,6 +47,7 @@ const Signup = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="example@gmail.com"
+                    autocomplete="off"
                 />
                 <InputField
                     label="Password"
@@ -55,6 +56,7 @@ const Signup = () => {
                     value={formData.password}
                     onChange={handleChange}
                     placeholder="••••••••"
+                    autocomplete="new-password"
                 />
                 <InputField
                     label="Confirm Password"
@@ -63,6 +65,7 @@ const Signup = () => {
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     placeholder="••••••••"
+                    autocomplete="new-password"
                 />
 
                 <button className="signup-btn">Sign Up</button>

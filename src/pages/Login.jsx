@@ -21,7 +21,7 @@ const Login = () => {
             className="container"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 100 }}
+            exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
         >
             <img className="account-box" src={AccountBoxIcon} alt="Icon"/>
@@ -35,6 +35,8 @@ const Login = () => {
                     placeholder="example@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    autocomplete="off"
+
                 />
                 <InputField
                     label="Password"
@@ -42,6 +44,7 @@ const Login = () => {
                     placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    autocomplete="new-password"
                 />
 
                 <button className="login-btn">Login</button>
