@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import InputField from "../components/InputField";
 // import '../assets';
 import "../App.css";
@@ -16,7 +16,7 @@ const Login = () => {
   };
 
   return (
-    <motion.div
+    <Motion.div
       className="container"
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
@@ -54,7 +54,7 @@ const Login = () => {
           Sign Up
         </Link>
       </p>
-    </motion.div>
+    </Motion.div>
   );
 };
 

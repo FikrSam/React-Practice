@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import InputField from "../components/InputField";
 import "../App.css";
 import PersonIcon from "../assets/Person Icon.svg";
@@ -18,7 +18,7 @@ const Signup = () => {
   };
 
   return (
-    <motion.div
+    <Motion.div
       className="container"
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
@@ -74,7 +74,7 @@ const Signup = () => {
           Login
         </Link>
       </p>
-    </motion.div>
+    </Motion.div>
   );
 };
 
